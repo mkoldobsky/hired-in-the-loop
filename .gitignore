@@ -1,0 +1,18 @@
+# Personal data: never commit
+cv/master.json
+config/search-profile.json
+tracker/opportunities.jsonl
+tracker/log.md
+applications/*
+!applications/.gitkeep
+sources/candidates.json
+sources/seen.json
+
+# Generated files
+*.pdf
+cv/*.html
+
+# OS / tools
+.DS_Store
+node_modules/
+.claude/settings.local.json

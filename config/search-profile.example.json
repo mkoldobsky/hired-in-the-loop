@@ -1,0 +1,49 @@
+{
+  "_note": "Search profile used by scout and tailor. Copy to search-profile.json (git-ignored) and edit it for your own search.",
+  "roles": {
+    "primary": [
+      "Head of Engineering",
+      "VP of Engineering",
+      "Director of Engineering",
+      "Engineering Director"
+    ],
+    "secondary": [
+      "Engineering Manager",
+      "Head of Platform",
+      "Chief Architect"
+    ]
+  },
+  "markets_priority": [
+    { "market": "remote-global", "description": "Remote for companies anywhere, paid in USD/EUR", "bonus": 20 },
+    { "market": "remote-region", "description": "Remote for companies in your region", "bonus": 10 },
+    { "market": "hybrid-local", "description": "Hybrid in your city", "bonus": 0 },
+    { "market": "onsite", "description": "On-site, lowest priority", "bonus": -25 }
+  ],
+  "dealbreakers": [
+    "requires residency or citizenship you don't have",
+    "requires visa sponsorship",
+    "junior/mid individual contributor role"
+  ],
+  "nice_to_have": [
+    "fintech",
+    "e-commerce",
+    "AI/ML product",
+    "Series A–C startups"
+  ],
+  "score_threshold_tailor": 70,
+  "max_detail_fetches_per_run": 15,
+  "public_sources": {
+    "_note": "Public sources read by sources/fetch.mjs. Patterns are case-insensitive regular expressions. greenhouse_boards = board id (boards.greenhouse.io/<id>). himalayas_country = ISO code of the country you work from (optional).",
+    "title_pattern": "\\b(CTO|VP,? (of )?engineering|head of (engineering|platform|technology)|(senior )?director,? (of )?(software )?engineering|engineering director|engineering manager)\\b",
+    "title_exclude_pattern": "\\b(chief of staff|assistant|sales|marketing|recruit|solutions? engineering|pre-?sales)\\b",
+    "location_pattern": "remote|worldwide|anywhere|global",
+    "himalayas_country": "",
+    "himalayas_queries": [
+      "head of engineering",
+      "director of engineering",
+      "VP engineering"
+    ],
+    "greenhouse_boards": [],
+    "hackernews": true
+  }
+}

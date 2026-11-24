@@ -1,0 +1,85 @@
+{
+  "_note": "Single source of truth for your CV. Tailored CVs are derived from this file: agents may select, reorder and rephrase, NEVER invent facts or metrics. Copy to master.json (git-ignored) and replace with your real experience. Everything below is a fictional example.",
+  "name": "Alex Rivera",
+  "headline": "Engineering Leader · Platform & Delivery",
+  "tagline": "Engineering Leadership · Distributed Systems · AI-Native Product Building",
+  "contact": {
+    "email": "alex.rivera@example.com",
+    "linkedin": "linkedin.com/in/example",
+    "location": "Remote"
+  },
+  "summary": "Engineering leader with 12+ years building and scaling product teams in payments and e-commerce. Led organizations of up to 40 engineers, combining hands-on technical depth with delivery discipline and business-driven decisions.",
+  "highlights": [
+    { "value": "40", "label": "Engineers led across 5 teams" },
+    { "value": "99.95%", "label": "Checkout uptime after platform rebuild" },
+    { "value": "-35%", "label": "Cloud cost per transaction" },
+    { "value": "2w → 2d", "label": "Release cycle time" }
+  ],
+  "experience": [
+    {
+      "id": "acme-pay",
+      "title": "Director of Engineering",
+      "company": "Acme Pay (fictional)",
+      "period": "2021 – Present",
+      "tags": ["leadership", "payments", "platform", "delivery"],
+      "bullets": [
+        { "text": "Lead 5 teams (40 engineers) owning the checkout and payouts platform.", "tags": ["leadership", "payments"] },
+        { "text": "Rebuilt checkout on an event-driven architecture, reaching 99.95% uptime.", "tags": ["platform", "payments"] },
+        { "text": "Cut release cycle time from two weeks to two days with trunk-based development and CI/CD.", "tags": ["delivery"] },
+        { "text": "Reduced cloud cost per transaction by 35% through capacity planning and right-sizing.", "tags": ["cost", "platform"] }
+      ]
+    },
+    {
+      "id": "shopco",
+      "title": "Engineering Manager",
+      "company": "ShopCo (fictional)",
+      "period": "2016 – 2021",
+      "tags": ["leadership", "e-commerce", "hiring"],
+      "bullets": [
+        { "text": "Grew the search and catalog team from 4 to 15 engineers, owning hiring and career paths.", "tags": ["leadership", "hiring"] },
+        { "text": "Led incident response for peak-season traffic, cutting mean time to recovery in half.", "tags": ["reliability"] }
+      ]
+    },
+    {
+      "id": "devstudio",
+      "title": "Senior Software Engineer",
+      "company": "DevStudio (fictional)",
+      "period": "2012 – 2016",
+      "tags": ["engineering", "backend"],
+      "bullets": [
+        { "text": "Built backend services and APIs for client products in Java and Node.js.", "tags": ["backend"] }
+      ]
+    }
+  ],
+  "ventures": [
+    {
+      "id": "side-project",
+      "title": "Founder",
+      "company": "Side Project (fictional)",
+      "url": "example.com",
+      "period": "2024 – Present",
+      "tags": ["ai", "product", "hands-on"],
+      "description": "A small AI-powered app built hands-on with an agent-driven workflow.",
+      "bullets": [
+        { "text": "Took the product from idea to production on web and mobile, with CI and automated tests.", "tags": ["hands-on", "product"] }
+      ]
+    }
+  ],
+  "education": [
+    { "degree": "B.Sc. in Computer Science", "school": "Example University" }
+  ],
+  "competencies": [
+    "Engineering Leadership",
+    "Delivery Management",
+    "Distributed Systems",
+    "Event-Driven Architecture",
+    "Payments",
+    "Cloud Cost Optimization",
+    "Hiring & Career Development",
+    "AI-Native Development"
+  ],
+  "languages": [
+    "English: Native",
+    "Spanish: Professional"
+  ]
+}
