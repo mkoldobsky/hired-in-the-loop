@@ -1,6 +1,6 @@
 # hired-in-the-loop
 
-**Un equipo de agentes de IA para tu búsqueda laboral. Ninguno puede postularse sin tu OK.**
+**Un equipo de agentes de IA para tu búsqueda laboral. Ninguno puede postularte sin tu OK.**
 
 [English](README.md)
 
@@ -10,7 +10,7 @@ Buscar trabajo es un segundo trabajo: revisar alertas, leer avisos, adaptar el C
 
 | Agente | Qué hace | Qué no hace nunca |
 |---|---|---|
-| **job-scout** | Lee tus alertas por mail y fuentes públicas, puntúa cada aviso contra tu perfil y lo carga en el tracker | Postularse |
+| **job-scout** | Lee tus alertas por mail y fuentes públicas, puntúa cada aviso contra tu perfil y lo carga en el tracker | Postularte a nada |
 | **job-tailor** | Arma CV a medida (PDF), carta y análisis de fit honesto para los avisos que superan tu umbral | Inventar experiencia, métricas o cargos |
 | **job-apply** | Completa los formularios con el paquete aprobado | Tocar Enviar sin tu OK final, crear cuentas, ingresar contraseñas, resolver CAPTCHAs |
 | **job-inbox** | Revisa respuestas, actualiza estados y redacta borradores con horarios de tu calendario | Enviar un mail |

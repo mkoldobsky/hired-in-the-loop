@@ -1,6 +1,6 @@
 # hired-in-the-loop
 
-**A team of AI agents for your job search. None of them can apply without your OK.**
+**A team of AI agents for your job search. None of them can apply on your behalf without your OK.**
 
 [Español](README.es.md)
 
@@ -10,7 +10,7 @@ Looking for a job is a second job: scanning alerts, reading postings, tailoring 
 
 | Agent | What it does | What it never does |
 |---|---|---|
-| **job-scout** | Reads your job-alert emails and public sources, scores each posting against your profile, adds it to the tracker | Apply to anything |
+| **job-scout** | Reads your job-alert emails and public sources, scores each posting against your profile, adds it to the tracker | Submit any application |
 | **job-tailor** | Builds a tailored CV (PDF), cover letter and honest fit analysis for postings above your threshold | Invent experience, metrics or titles |
 | **job-apply** | Fills application forms with the approved package | Click Submit without your final OK, create accounts, enter passwords, solve CAPTCHAs |
 | **job-inbox** | Checks replies, updates statuses, drafts answers with time slots from your calendar | Send an email |
