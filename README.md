@@ -10,6 +10,7 @@ Looking for a job is a second job: scanning alerts, reading postings, tailoring 
 
 | Agent | What it does | What it never does |
 |---|---|---|
+| **cv-import** | Turns your existing CV (PDF, Word, or LinkedIn's "Save to PDF") into `cv/master.json`, then asks you for the metrics it's missing | Add anything that isn't in your CV or your answers |
 | **job-scout** | Reads your job-alert emails and public sources, scores each posting against your profile, adds it to the tracker | Submit any application |
 | **job-tailor** | Builds a tailored CV (PDF), cover letter and honest fit analysis for postings above your threshold | Invent experience, metrics or titles |
 | **job-apply** | Fills application forms with the approved package | Click Submit without your final OK, create accounts, enter passwords, solve CAPTCHAs |
@@ -38,11 +39,13 @@ Requirements: [Claude Code](https://claude.com/claude-code), Node.js 18+, Google
 ```bash
 git clone https://github.com/<you>/hired-in-the-loop.git
 cd hired-in-the-loop
-cp cv/master.example.json cv/master.json
 cp config/search-profile.example.json config/search-profile.json
 ```
 
-1. Replace `cv/master.json` with your real experience. This is the only place facts come from, so be complete and precise.
+1. Create `cv/master.json`, the only place facts come from:
+   - **Easiest:** open Claude Code in the folder and say "import my CV". Give it your CV as PDF or Word (or your LinkedIn profile: More → Save to PDF). It builds the file, asks you for the numbers it's missing (team sizes, results), and shows you the rendered PDF to check. No JSON editing.
+   - **By hand:** `cp cv/master.example.json cv/master.json` and replace the example with your experience.
+   - Either way, check it with `node cv/validate.mjs`.
 2. Edit `config/search-profile.json`: target roles, markets, dealbreakers, score threshold and public sources.
 3. Check the CV renders: `node cv/render.mjs cv/master.json cv/CV.pdf` (set `CHROME_PATH` on Linux/Windows).
 4. Open Claude Code in the folder and say "scout", then "tailor", then review the approval queue.

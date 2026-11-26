@@ -7,11 +7,13 @@ AI agents that do the heavy lifting of a job search. **The user makes every deci
 |---|---|
 | `cv/master.json` | **Single source of truth** for the CV (copy from `master.example.json`). Every tailored CV is derived from it. |
 | `cv/render.mjs` | `node cv/render.mjs <cv.json> <out.pdf>` → HTML + PDF (headless Chrome, no dependencies) |
+| `cv/validate.mjs` | `node cv/validate.mjs [cv.json]` → schema check + what still needs the user's input |
+| `cv/extract-text.mjs` | `node cv/extract-text.mjs <file.docx\|.odt>` → plain text (PDFs are read directly) |
 | `config/search-profile.json` | Target roles, markets, priorities, score threshold, public sources (copy from the `.example`) |
 | `tracker/tracker.mjs` | **Memory**: CLI to add/update/list opportunities (`opportunities.jsonl`) and the activity log (`log.md`) |
 | `sources/fetch.mjs` | Reads public job sources (Himalayas, HN "Who is hiring?", Greenhouse boards) into `sources/candidates.json` |
 | `applications/<id>/` | One folder per opportunity: `job.md`, `cv.json`, `cv.pdf`, `cover.md`, `fit.md`, `emails.md`, `prep.md` |
-| `.claude/skills/` | The agents: `job-scout`, `job-tailor`, `job-apply`, `job-inbox`, `interview-prep`, `job-status` |
+| `.claude/skills/` | The agents: `cv-import`, `job-scout`, `job-tailor`, `job-apply`, `job-inbox`, `interview-prep`, `job-status` |
 
 ## Pipeline
 `found → drafted → approved → applied → replied → interview → offer | rejected | discarded`

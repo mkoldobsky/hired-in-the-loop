@@ -1,5 +1,8 @@
 # Personal data: never commit
 cv/master.json
+cv/master.imported.json
+cv/source/
+cv/questions.md
 config/search-profile.json
 tracker/opportunities.jsonl
 tracker/log.md

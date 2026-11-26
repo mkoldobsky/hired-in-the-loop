@@ -10,6 +10,7 @@ Buscar trabajo es un segundo trabajo: revisar alertas, leer avisos, adaptar el C
 
 | Agente | Qué hace | Qué no hace nunca |
 |---|---|---|
+| **cv-import** | Convierte tu CV actual (PDF, Word o el "Guardar en PDF" de LinkedIn) en `cv/master.json` y te pregunta las métricas que faltan | Agregar algo que no esté en tu CV o en tus respuestas |
 | **job-scout** | Lee tus alertas por mail y fuentes públicas, puntúa cada aviso contra tu perfil y lo carga en el tracker | Postularte a nada |
 | **job-tailor** | Arma CV a medida (PDF), carta y análisis de fit honesto para los avisos que superan tu umbral | Inventar experiencia, métricas o cargos |
 | **job-apply** | Completa los formularios con el paquete aprobado | Tocar Enviar sin tu OK final, crear cuentas, ingresar contraseñas, resolver CAPTCHAs |
@@ -31,11 +32,13 @@ Requisitos: Claude Code, Node.js 18+, Google Chrome (para generar los PDFs). Par
 ```bash
 git clone https://github.com/<vos>/hired-in-the-loop.git
 cd hired-in-the-loop
-cp cv/master.example.json cv/master.json
 cp config/search-profile.example.json config/search-profile.json
 ```
 
-1. Reemplazá `cv/master.json` con tu experiencia real. Es la única fuente de hechos: completo y preciso.
+1. Creá `cv/master.json`, la única fuente de hechos:
+   - **Lo más fácil:** abrí Claude Code en la carpeta y decí "importá mi CV". Pasale tu CV en PDF o Word (o tu perfil de LinkedIn: Más → Guardar en PDF). Arma el archivo, te pregunta los números que faltan (tamaño de equipos, resultados) y te muestra el PDF para que lo revises. Sin tocar JSON.
+   - **A mano:** `cp cv/master.example.json cv/master.json` y reemplazá el ejemplo con tu experiencia.
+   - En los dos casos, revisalo con `node cv/validate.mjs`.
 2. Editá `config/search-profile.json`: roles, mercados, dealbreakers, umbral y fuentes.
 3. Probá el render: `node cv/render.mjs cv/master.json cv/CV.pdf`.
 4. Abrí Claude Code en la carpeta y pedí "scout", después "tailor", y revisá la cola de aprobación.

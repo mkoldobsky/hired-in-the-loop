@@ -1,5 +1,7 @@
 {
   "_note": "Single source of truth for your CV. Tailored CVs are derived from this file: agents may select, reorder and rephrase, NEVER invent facts or metrics. Copy to master.json (git-ignored) and replace with your real experience. Everything below is a fictional example.",
+  "lang": "en",
+  "labels": { "summary": "Executive Summary", "experience": "Experience", "ventures": "Ventures", "competencies": "Core Competencies", "education": "Education", "languages": "Languages" },
   "name": "Alex Rivera",
   "headline": "Engineering Leader · Platform & Delivery",
   "tagline": "Engineering Leadership · Distributed Systems · AI-Native Product Building",
