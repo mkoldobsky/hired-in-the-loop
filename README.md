@@ -37,7 +37,7 @@ The full rule set is in [CLAUDE.md](CLAUDE.md).
 Requirements: [Claude Code](https://claude.com/claude-code), Node.js 18+, Google Chrome (to print PDFs). For email and calendar features, connect the Gmail and Google Calendar connectors in Claude. For filling forms, a browser tool such as Claude in Chrome.
 
 ```bash
-git clone https://github.com/<you>/hired-in-the-loop.git
+git clone https://github.com/mkoldobsky/hired-in-the-loop.git
 cd hired-in-the-loop
 cp config/search-profile.example.json config/search-profile.json
 ```

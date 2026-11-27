@@ -30,7 +30,7 @@ Buscar trabajo es un segundo trabajo: revisar alertas, leer avisos, adaptar el C
 Requisitos: Claude Code, Node.js 18+, Google Chrome (para generar los PDFs). Para mail y calendario, conectá Gmail y Google Calendar en Claude.
 
 ```bash
-git clone https://github.com/<vos>/hired-in-the-loop.git
+git clone https://github.com/mkoldobsky/hired-in-the-loop.git
 cd hired-in-the-loop
 cp config/search-profile.example.json config/search-profile.json
 ```
